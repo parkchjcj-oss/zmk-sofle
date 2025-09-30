@@ -112,8 +112,18 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-         display-name = "layer4";
+
+            display-name = "layer4";
             sensor-bindings = <&scroll_encoder>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        d {
+            if-layers = <1>;
+            then-layer = <1>;
         };
     };
 };
